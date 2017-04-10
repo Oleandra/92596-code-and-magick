@@ -15,18 +15,18 @@ for (var i = 0; i < 4; i++) {
     coatColor: coatColors[Math.floor((Math.random() * coatColors.length))],
     eyesColor: eyesColors[Math.floor((Math.random() * eyesColors.length))],
 
-  }
+  };
 
   personsLook.push(person);
 
-};
+}
 var userDialog = document.querySelector('.setup');
 userDialog.classList.remove('hidden');
 
 var similarListElement = userDialog.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content;
 
-var renderWizard = function(p) {
+var renderWizard = function (p) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
 
   wizardElement.querySelector('.setup-similar-label').textContent = p.name;
@@ -34,13 +34,13 @@ var renderWizard = function(p) {
   wizardElement.querySelector('.wizard-eyes').style.fill = p.eyesColor;
 
   return wizardElement;
-}
+};
 
 var fragment = document.createDocumentFragment();
 
-for (var i = 0; i < personsLook.length; i++) {
-  var item = personsLook[i];
-  fragment.appendChild(renderWizard(item))
+for (var j = 0; j < personsLook.length; j++) {
+  var item = personsLook[j];
+  fragment.appendChild(renderWizard(item));
 }
 similarListElement.appendChild(fragment);
 
