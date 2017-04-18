@@ -47,8 +47,6 @@ similarListElement.appendChild(fragment);
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
 
 // task4-module1
-'use strict';
-
 window.enableSetup = (function () {
   var setup = document.querySelector('.setup');
   var nameField = document.querySelector('.setup-user-name');
@@ -208,6 +206,3 @@ window.enableSetup = (function () {
     onSetupClose = cb;
   };
 })();
-
-
-
